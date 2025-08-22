@@ -1,5 +1,7 @@
 package akhilshettyym.Leet.Easy;
 
+// Given an integer x, return true if x is a palindrome, and false otherwise.
+// Runtime 6ms
 public class B_Palindrome {
     public static void main(String[] args) {
         int x = 10;
