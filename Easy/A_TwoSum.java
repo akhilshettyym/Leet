@@ -19,6 +19,7 @@ public class A_TwoSum {
         System.out.println(Arrays.toString(test));
     }
 
+    // Leet
     public static int[] twoSum(int[] nums, int target) {
         for (int i = 0; i < nums.length; i++) {
             for (int j = i + 1; i < nums.length; j++) {
