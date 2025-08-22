@@ -1,10 +1,12 @@
 package akhilshettyym.Leet.Easy;
 
+// Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
+// Runtime 45ms.
 import java.util.Arrays;
 
 public class A_TwoSum {
     public static void main(String[] args) {
-        int[] nums = { 2, 7, 11, 15};
+        int[] nums = { 2, 7, 11, 15 };
         int target = 9;
 
         // int[] nums = { 3, 3 };
