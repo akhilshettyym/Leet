@@ -1,44 +1,40 @@
 package akhilshettyym.Leet.Easy;
 
+import java.util.Scanner;
 import java.util.Stack;
 
-class Main {
-   public static boolean main(String[] args) {
-       String str = "([])";
-       Stack<Character> charStack = new Stack<>();
-
-       for (char c : str.toCharArray()) {
-           if (c == '(' || c == '{' || c == '[') {
-               charStack.push(c);
-           } else if (c == ')' || c == '}' || c == ']') {
-               if (charStack.isEmpty()) {
-                   return false;
-               }
-               char top = charStack.pop();
-               if (!isMatchingPair(top, c)) {
-                   return false;
-               }
-           }
-       }
-
-       if (charStack.isEmpty()) {
-           return true;
-       } else {
-           return false;
-       }
-   }
-
-   private static boolean isMatchingPair(char open, char close) {
-       return (open == '(' && close == ')') ||
-              (open == '{' && close == '}') ||
-              (open == '[' && close == ']');
-   }
-}
-
-
-// I want the above in below format
 class Solution {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a string of brackets: ");
+        String input = sc.nextLine();
+
+        Solution sol = new Solution();
+        boolean result = sol.isValid(input);
+
+        System.out.println(result);
+        sc.close();
+    }
+
     public boolean isValid(String s) {
-        
+        Stack<Character> charStack = new Stack<>();
+
+        for (char c : s.toCharArray()) {
+            if (c == '(' || c == '{' || c == '[') {
+                charStack.push(c);
+            } else if (c == ')' || c == '}' || c == ']') {
+                if (charStack.isEmpty()) {
+                    return false;
+                }
+                char top = charStack.pop();
+                if ((c == ')' && top != '(') ||
+                        (c == '}' && top != '{') ||
+                        (c == ']' && top != '[')) {
+                    return false;
+                }
+            }
+        }
+
+        return charStack.isEmpty();
     }
 }
