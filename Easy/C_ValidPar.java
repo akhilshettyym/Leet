@@ -1,5 +1,11 @@
 package akhilshettyym.Leet.Easy;
 
+/* Given a string s containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
+An input string is valid if:
+- Open brackets must be closed by the same type of brackets.
+- Open brackets must be closed in the correct order.
+- Every close bracket has a corresponding open bracket of the same type. 
+- Runtime 3ms */
 import java.util.Scanner;
 import java.util.Stack;
 
@@ -15,7 +21,8 @@ class Solution {
         System.out.println(result);
         sc.close();
     }
-
+     
+    // Leet
     public boolean isValid(String s) {
         Stack<Character> charStack = new Stack<>();
 
@@ -34,7 +41,6 @@ class Solution {
                 }
             }
         }
-
         return charStack.isEmpty();
     }
 }
