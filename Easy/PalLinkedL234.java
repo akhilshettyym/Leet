@@ -2,7 +2,7 @@ package akhilshettyym.Leet.Easy;
 
 // Given the head of a singly linked list, return true if it is a palindrome or false otherwise.
 // Runtime 6ms
-public class PalLinkedL {
+public class PalLinkedL234 {
     public static class ListNode {
         int val;
         ListNode next;

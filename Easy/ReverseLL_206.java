@@ -2,9 +2,9 @@ package akhilshettyym.Leet.Easy;
 
 // Given the head of a singly linked list, reverse the list, and return the reversed list.
 // Runtime 0ms
-import akhilshettyym.Leet.Easy.PalLinkedL.ListNode;
+import akhilshettyym.Leet.Easy.PalLinkedL234.ListNode;
 
-public class ReverseLL {
+public class ReverseLL_206 {
 
     class Solution {
         public ListNode reverseList(ListNode head) {
@@ -32,7 +32,7 @@ public class ReverseLL {
         System.out.print("Original List: ");
         printList(head);
 
-        ReverseLL outer = new ReverseLL();
+        ReverseLL_206 outer = new ReverseLL_206();
         Solution sol = outer.new Solution();
         ListNode reversedHead = sol.reverseList(head);
 

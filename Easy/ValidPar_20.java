@@ -44,7 +44,7 @@ class Solution {
         return charStack.isEmpty();
     }
 
-    public String hasCycle(LinkedLCycle node1) {
+    public String hasCycle(LinkedLCycle_141 node1) {
         // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'hasCycle'");
     }

@@ -2,10 +2,10 @@ package akhilshettyym.Leet.Easy;
 
 // Given an integer x, return true if x is a palindrome, and false otherwise.
 // Runtime 6ms
-public class Palindrome {
+public class Palindrome_9 {
     public static void main(String[] args) {
         int x = 10;
-        Palindrome sol = new Palindrome();
+        Palindrome_9 sol = new Palindrome_9();
         boolean ans = sol.isPalindrome(x);
         System.out.println(ans);
     }
