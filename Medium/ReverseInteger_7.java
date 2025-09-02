@@ -1,10 +1,14 @@
 package akhilshettyym.Leet.Medium;
-/*Given a signed 32-bit integer x, return x with its digits reversed. If reversing x causes the value to go outside the signed 32-bit integer range [-231, 231 - 1], then return 0.
 
+/* 
+Given a signed 32-bit integer x, return x with its digits reversed. 
+If reversing x causes the value to go outside the signed 32-bit integer 
+range [-2^31, 2^31 - 1], then return 0.
 Assume the environment does not allow you to store 64-bit integers (signed or unsigned).
-Runtime 1ms*/
+*/
 public class ReverseInteger_7 {
-    class Solution {
+
+    static class Solution {
         public int reverse(int x) {
             int rev = 0;
             while (x != 0) {
@@ -15,5 +19,19 @@ public class ReverseInteger_7 {
             }
             return rev;
         }
+    }
+
+    public static void main(String[] args) {
+        Solution sol = new Solution();
+
+        int test1 = 123;
+        int test2 = -123;
+        int test3 = 120;
+        int test4 = 1534236469;
+
+        System.out.println("Input: " + test1 + " → Output: " + sol.reverse(test1));
+        System.out.println("Input: " + test2 + " → Output: " + sol.reverse(test2));
+        System.out.println("Input: " + test3 + " → Output: " + sol.reverse(test3));
+        System.out.println("Input: " + test4 + " → Output: " + sol.reverse(test4));
     }
 }
