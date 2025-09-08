@@ -13,23 +13,6 @@ public class LinkedLCycle_141 {
         next = null;
     }
 
-    public static void main(String[] args) {
-        Solution sol = new Solution();
-        LinkedLCycle_141 node1 = new LinkedLCycle_141(3);
-        LinkedLCycle_141 node2 = new LinkedLCycle_141(2);
-        LinkedLCycle_141 node3 = new LinkedLCycle_141(0);
-        LinkedLCycle_141 node4 = new LinkedLCycle_141(-4);
-        node1.next = node2;
-        node2.next = node3;
-        node3.next = node4;
-        node4.next = node2;
-        System.out.println("Has Cycle? " + sol.hasCycle(node1));
-        LinkedLCycle_141 a = new LinkedLCycle_141(1);
-        LinkedLCycle_141 b = new LinkedLCycle_141(2);
-        a.next = b;
-        System.out.println("Has Cycle? " + sol.hasCycle(a));
-    }
-
     public boolean hasCycle(LinkedLCycle_141 head) {
         if (head == null) {
             return false;
@@ -44,5 +27,26 @@ public class LinkedLCycle_141 {
             }
         }
         return false;
+    }
+
+    public static void main(String[] args) {
+        LinkedLCycle_141 util = new LinkedLCycle_141(0);
+
+        LinkedLCycle_141 node1 = new LinkedLCycle_141(3);
+        LinkedLCycle_141 node2 = new LinkedLCycle_141(2);
+        LinkedLCycle_141 node3 = new LinkedLCycle_141(0);
+        LinkedLCycle_141 node4 = new LinkedLCycle_141(-4);
+
+        node1.next = node2;
+        node2.next = node3;
+        node3.next = node4;
+        node4.next = node2;
+
+        System.out.println("Has Cycle? " + util.hasCycle(node1));
+
+        LinkedLCycle_141 a = new LinkedLCycle_141(1);
+        LinkedLCycle_141 b = new LinkedLCycle_141(2);
+        a.next = b;
+        System.out.println("Has Cycle? " + util.hasCycle(a));
     }
 }
