@@ -16,8 +16,7 @@ class Solution {
        }
        return head;
    }
-}
-*/
+}   */
 
 public class RemoveDuplicate_83 {
     class ListNode {

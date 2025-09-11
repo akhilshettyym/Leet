@@ -21,8 +21,7 @@ class Solution {
         }
         return k;
     }
-}
-*/
+}   */
 
 public class RemoveDuplicates_26 {
     public static int removeDuplicates(int[] nums) {

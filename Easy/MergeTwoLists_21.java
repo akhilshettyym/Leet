@@ -18,8 +18,7 @@ class Solution {
             return list2;
         }
     }
-}
-*/
+}   */
 
 class ListNode {
     int val;

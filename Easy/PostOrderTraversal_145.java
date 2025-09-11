@@ -1,25 +1,26 @@
 package akhilshettyym.Leet.Easy;
-/* Given the root of a binary tree, return the inorder traversal of its nodes' values.
-Runtime 0ms 
 
-LeetCode - 
+/* Given the root of a binary tree, return the postorder traversal of its nodes' values.
+Runtime 0ms
+
+LeetCode -
 class Solution {
-    public List<Integer> inorderTraversal(TreeNode root) {
+    public List<Integer> postorderTraversal(TreeNode root) {
         List<Integer> result = new ArrayList<>();
-        inorderHelper(root, result);
+        postorderHelper(root, result);
         return result;
     }
-    private void inorderHelper(TreeNode root, List<Integer> result) {
+
+    private void postorderHelper(TreeNode root, List<Integer> result) {
         if(root == null) {
             return;
         }
-        inorderHelper(root.left, result);
-        result.add(root.val);
-        inorderHelper(root.right, result);
+        postorderHelper(root.left, result);
+        postorderHelper(root.right, result);
+        result.add(root.val);      
     }
 }   */
- 
-public class InOrderTraversal_94 {
+public class PostOrderTraversal_145 {
     static class Node {
         int data;
         Node left;
@@ -35,31 +36,31 @@ public class InOrderTraversal_94 {
     static class BinaryTree {
         static int idx = -1;
 
-        public static Node buildTree(int nodes[]) {
+        public static Node buildNode(int nodes[]) {
             idx++;
             if (nodes[idx] == -1) {
                 return null;
             }
             Node newNode = new Node(nodes[idx]);
-            newNode.left = buildTree(nodes);
-            newNode.right = buildTree(nodes);
+            newNode.left = buildNode(nodes);
+            newNode.right = buildNode(nodes);
 
             return newNode;
         }
     }
 
-    public static void inOrderTraversal(Node root) {
+    public static void postOrderTraversal(Node root) {
         if (root == null) {
             return;
         }
-        inOrderTraversal(root.left);
+        postOrderTraversal(root.left);
+        postOrderTraversal(root.right);
         System.out.print(root.data + " ");
-        inOrderTraversal(root.right);
     }
 
     public static void main(String[] args) {
         int nodes[] = { 1, 2, 4, -1, -1, 5, -1, -1, 3, -1, 6, -1, -1 };
-        Node root = BinaryTree.buildTree(nodes);
-        inOrderTraversal(root);
+        Node root = BinaryTree.buildNode(nodes);
+        postOrderTraversal(root);
     }
 }

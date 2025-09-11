@@ -23,8 +23,7 @@ class Solution {
         }
         return left;
     }
-}
-*/
+}   */
 
 class Solution {
     public int searchInsert(int[] nums, int target) {

@@ -23,8 +23,7 @@ class Solution {
         }
         return head;
     }
-}
-*/
+}   */
 
 class ListNode {
     int val;

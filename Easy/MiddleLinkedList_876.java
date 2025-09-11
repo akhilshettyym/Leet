@@ -15,8 +15,7 @@ class Solution {
         }
         return slow;
     }
-}
-*/
+}   */
 
 public class MiddleLinkedList_876 {
     class Solution {

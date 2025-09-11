@@ -25,8 +25,7 @@ class Solution {
         prev.next = prev.next.next;
         return head;
     }
-}
-*/
+}   */
  
 public class RemoveNth_19 {
 

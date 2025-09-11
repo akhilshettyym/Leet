@@ -24,8 +24,7 @@ public class Solution {
         }
         return false;
     }
-}
-*/
+}   */
 
 public class LinkedLCycle_141 {
     int val;
