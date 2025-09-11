@@ -6,7 +6,24 @@ Consider the number of unique elements of nums to be k, to get accepted, you nee
 
 Change the array nums such that the first k elements of nums contain the unique elements in the order they were present in nums initially. The remaining elements of nums are not important as well as the size of nums.
 Return k.
-Runtime 1ms */
+Runtime 1ms 
+
+LeetCode -
+class Solution {
+    public int removeDuplicates(int[] nums) {
+        if(nums.length == 0) return 0;
+        int k=1;
+        for(int i=1; i<nums.length; i++){
+            if(nums[i] != nums[i-1]){
+                nums[k] = nums[i];
+                k++;
+            }
+        }
+        return k;
+    }
+}
+*/
+
 public class RemoveDuplicates_26 {
     public static int removeDuplicates(int[] nums) {
         if (nums.length == 0)
