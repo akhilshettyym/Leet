@@ -1,7 +1,33 @@
 package akhilshettyym.Leet.Medium;
 
-// Given the head of a linked list, remove the nth node from the end of the list and return its head.
-// Runtime 0ms
+/* Given the head of a linked list, remove the nth node from the end of the list and return its head.
+Runtime 0ms
+
+LeetCode - 
+class Solution {
+    public ListNode removeNthFromEnd(ListNode head, int n) {
+        int size = 0;
+        ListNode curr = head;
+        while(curr != null) {
+            curr = curr.next;
+            size++;
+        }
+        if(n == size) {
+            return head.next;
+        }
+        int indexToSearch = size - n;
+        ListNode prev = head;
+        int i =1;
+        while(i < indexToSearch) {
+            prev = prev.next;
+            i++;
+        }
+        prev.next = prev.next.next;
+        return head;
+    }
+}
+*/
+ 
 public class RemoveNth_19 {
 
     int val;
