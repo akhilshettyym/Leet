@@ -31,6 +31,7 @@ class Solution {
         return result;
     }
 }   */
+
 import java.util.Scanner;
 
 public class Sqrt_69 {
