@@ -1,7 +1,6 @@
 package akhilshettyym.Leet.Easy;
 
-/*
-Given the root of a binary tree, return the inorder traversal of its nodes' values.
+/* Given the root of a binary tree, return the inorder traversal of its nodes' values.
 Runtime 0ms
 
 LeetCode -

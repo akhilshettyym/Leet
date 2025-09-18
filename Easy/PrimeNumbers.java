@@ -1,6 +1,6 @@
 package akhilshettyym.Leet.Easy;
 
-/*You are given an integer n. You need to check if the number is prime or not. Return true if it is a prime number, otherwise return false.
+/* You are given an integer n. You need to check if the number is prime or not. Return true if it is a prime number, otherwise return false.
 
 A prime number is a number which has no divisors except 1 and itself. */
 import java.util.Scanner;
